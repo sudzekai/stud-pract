@@ -1,0 +1,6 @@
+{
+  "commands": [
+    {"cmd": "create", "name": "a.txt"},
+    {"cmd": "write", "name": "a.txt", "text": "hello"}
+  ]
+}
