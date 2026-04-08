@@ -1,0 +1,57 @@
+# Build results
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+project.assets.json
+*.nuget.props
+*.nuget.targets
+
+# Avalonia / .NET build artifacts
+AppPackages/
+PublishOutput/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test results
+TestResults/
+*.trx
+
+# Crash reports
+crashlog.txt
+
+# Dotnet tools
+.toolstargets
+
+# Local config files
+appsettings.Development.json
+
+# Android / Avalonia Android builds
+*.apk
+*.aab
+*.dex
+*.ap_
+
+# Publish output
+publish/

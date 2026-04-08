@@ -1,0 +1,73 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:task1.ViewModels"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="task1.Views.HomeView"
+             x:DataType="vm:HomeViewModel">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+            </Grid.RowDefinitions>
+			<StackPanel>
+                <TextBlock Text="{Binding Text}"
+                           HorizontalAlignment="Center"
+                           Foreground="Green"
+                           FontSize="40"/>
+
+                <Button Content="Изменить текст"
+                        Command="{Binding ChangeTextCommand}"/>
+            </StackPanel>
+            <Grid Grid.Row="1" Width="400" Height="300"
+                  ColumnDefinitions="*,2*"
+                  RowDefinitions="20,100">
+
+                <Rectangle Fill="Red" Grid.Row="0" Grid.Column="0"/>
+                <Rectangle Fill="Blue" Grid.Row="0" Grid.Column="1"/>
+                <Rectangle Fill="Green" Grid.Row="1" Grid.Column="0"/>
+                <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="1"/>
+
+            </Grid>
+            <DockPanel Grid.Row="2">
+				<StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Text 1" FontSize="14"/>
+                    <TextBlock Text="Text 2" FontSize="16"/>
+                    <TextBlock Text="Text 3" FontSize="18"/>
+                    <TextBlock Text="Text 4" FontSize="20"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Text 1" FontSize="14"/>
+                    <TextBlock Text="Text 2" FontSize="16"/>
+                    <TextBlock Text="Text 3" FontSize="18"/>
+                    <TextBlock Text="Text 4" FontSize="20"/>
+                </StackPanel>
+            </DockPanel>
+        </Grid>
+
+        <DockPanel Grid.Column="1" Width="400" Height="400">
+            <Rectangle Fill="Red"
+                       DockPanel.Dock="Top"
+                       Height="100"/>
+            <Rectangle Fill="Blue"
+                       DockPanel.Dock="Left"
+                       Width="100"/>
+            <Rectangle Fill="Green"
+                       DockPanel.Dock="Bottom"
+                       Height="100"/>
+            <Rectangle Fill="Yellow"
+                       DockPanel.Dock="Right"
+                       Width="100"/>
+            <Rectangle Fill="Gray"/>
+        </DockPanel>
+    </Grid>
+</UserControl>
